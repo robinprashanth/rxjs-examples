@@ -1,0 +1,10 @@
+<div fxLayout="row wrap">
+        <div fxFlex.lt-md="50" fxFlex.gt-lg="50" fxFlex="30" *ngFor="let type of observableTypes">
+            <mat-card>
+                <mat-card-content>
+                    <mat-card-title class="text-center" [routerLink]="type.link">{{type.name}}</mat-card-title>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    
+</div>

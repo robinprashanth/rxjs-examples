@@ -1,0 +1,73 @@
+
+<div fxLayout="row wrap">
+    <div  fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title class="text-center">Promise vs Async/Await</mat-card-title>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="33.3" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex -01: With Promise</mat-card-title>
+                <p>I Promise you to deliver something in future
+
+                </p>
+                <button class="m-t-10" mat-raised-button color="primary" (click)="checkMobilesAvailable()">Check Mobiles Availability</button>
+
+                <h3 class="m-0 font-light">{{mobileAvailable}}</h3>
+                <h3 class="text-danger font-bold">{{nonBlockedMsg}}</h3>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="33.3" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex -02: With Async / Await</mat-card-title>
+                <p>Await is basically syntactic sugar for Promises. It makes your asynchronous code look more like synchronous/procedural code, easier for humans to understand.
+
+                </p>
+                <button class="m-t-10" mat-raised-button color="primary" (click)="checkMobilesAvailableAsync()">Check Mobiles Availability</button>
+
+                <h3 class="m-0 font-light">{{mobileAvailableAsync}}</h3>
+                <h3 class="text-danger font-bold">{{blockedMsg}}</h3>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="33.3" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex -03: With Fetch API</mat-card-title>
+
+                <button class="m-t-10" mat-raised-button color="primary" (click)="fetchMobilesAvailable()">Check Mobiles Availability</button>
+
+                <h3 *ngIf="mobileAvailableFetch" class="m-0 font-light">{{mobileAvailableFetch | json }}</h3>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="33.3" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex -04: Promise All</mat-card-title>
+                <p>To resolve multiple promises using a promise chain, we can use Promise.all()</p>
+                <button class="m-t-10" mat-raised-button color="primary" (click)="promiseMeAll()">Promise Me All</button>
+
+                <h3  class="m-0 font-light">{{promiseAllMsg}}</h3>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="33.3" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex -05: Promise All Async/Await</mat-card-title>
+                <button class="m-t-10" mat-raised-button color="primary" (click)="runAsyncFunctions()">Promise Me with Async/Await</button>
+
+                <h3 class="text-danger font-bold">Users Transformed</h3>
+                <p>{{usersTransformed}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

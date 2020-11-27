@@ -1,0 +1,91 @@
+<app-comp-title [title]="'of'" [subTitle]="'Emit variable amount of values in a sequence and then emits a complete notification.'">
+
+</app-comp-title>
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 01 (OF)</mat-card-title>
+                <p class="text-info"> <strong>Data:</strong> of('Liam',
+                    'Noah',
+                    'Oliver',
+                    'William',
+                    'Elijah')</p>
+
+                    <ul *ngFor="let names  of namesArray">
+                        <li>
+                            {{names}}
+                        </li>
+                    </ul>
+                    <p class="text-danger font-bold">{{obsMsg}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 02 (OF)</mat-card-title>
+                <p class="text-info"> <strong>Data:</strong> of(&#123; a: 'Liam',
+                    b: 'Noah',
+                    c: 'Oliver',
+                    d: 'William',
+                    e: 'Elijah'&#125;)</p>
+                <p>Object to stream</p>
+               <ul>
+                   <li>
+                       <strong>a: </strong> {{namesArray2.a}}
+                   </li>
+                   <li>
+                       <strong>b: </strong> {{namesArray2.b}}
+                   </li>
+               </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div  fxFlex="100">
+        <app-comp-title [title]="'from'" [subTitle]="'Creates an Observable from an Array, an array-like object, a Promise, an iterable object, or an Observable-like object.'">
+
+        </app-comp-title>
+    </div>
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 01</mat-card-title>
+                <p class="text-info"> <strong>Data:</strong> from(['Liam',
+                    'Noah',
+                    'Oliver',
+                    'William',
+                    'Elijah'])</p>
+
+                    <ul *ngFor="let names  of fromObsNamesArray">
+                        <li>
+                            {{names}}
+                        </li>
+                    </ul>
+                    <p class="text-danger font-bold">{{fromMsg}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 02</mat-card-title>
+                <p class="text-info"> <strong>Data:</strong> Promise to observable</p>
+                    <p class="text-danger font-bold">{{fromPromise}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 03</mat-card-title>
+                    <p class="text-info"> <strong>Data:</strong> String to observable</p>
+                    <ul *ngFor="let st  of fromStringObs">
+                        <li>
+                            {{st}}
+                        </li>
+                    </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

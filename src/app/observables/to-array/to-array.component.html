@@ -1,0 +1,45 @@
+<app-comp-title [title]="'toArray'" [subTitle]="'Collects all source emissions and emits them as an array when the source completes.'">
+
+</app-comp-title>
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 01 </mat-card-title>
+                <p *ngIf="loadingNumbers" class="text-info font-bold">{{numArrayMsg}}</p>
+                    <ul *ngFor="let num  of numArray">
+                        <li>
+                            {{num}}
+                        </li>
+                    </ul>
+                    <p *ngIf="!loadingNumbers" class="text-danger font-bold">{{numArrayMsg}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 02 </mat-card-title>
+                    <ul *ngFor="let user  of nameArray">
+                        <li>
+                            name: {{user.name}}
+                        </li>
+                    </ul>
+                    <p  class="text-danger font-bold">{{nameArrayMsg}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 03 </mat-card-title>
+                    <ul *ngFor="let user of namesArray">
+                        <li>
+                            name: {{user}}
+                        </li>
+                    </ul>
+                    <p  class="text-danger font-bold">{{namesArrayMsg}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

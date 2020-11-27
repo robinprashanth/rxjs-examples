@@ -1,0 +1,28 @@
+<app-comp-title [title]="'fromEvent'" [subTitle]="'Turn event into observable sequence.'">
+
+</app-comp-title>
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="30" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Add Event</mat-card-title>
+
+                <button #addBtn mat-raised-button color="primary">Capture Event</button>
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="30" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Event Stream</mat-card-title>
+
+               <ul *ngFor="let ev  of listEvents">
+                   <li>
+                       {{ev.x}}, {{ev.y}}
+                   </li>
+               </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<app-comp-title [title]="'Custom Observable'">
+
+</app-comp-title>
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 01 (Manual)</mat-card-title>
+                <hr>
+                <ul [ngClass]="techStatus == 'completed' ? 'completed' : techStatus == 'error' ? 'error' : ''" class="list-style-none" *ngFor="let tech  of technologiesEmitted">
+                    <li>
+                        {{tech}}
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 02 (Custom interval)</mat-card-title>
+                <hr>
+                <ul [ngClass]="techStatus2 == 'completed' ? 'completed' : techStatus2 == 'error' ? 'error' : ''" class="list-style-none" *ngFor="let tech  of technologiesCustEmitted">
+                    <li>
+                        {{tech}}
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 03 (Random names)</mat-card-title>
+                <hr>
+                <p>
+                    <strong>Random names:</strong> {{randNames}}
+                </p>
+                <p>Current Name: <strong class="label-success">{{selectedName}}</strong></p>
+                <span [ngClass]="nameStatus == 'completed' ? 'label-success' : nameStatus == 'error' ? 'label-danger' : ''" class="label-success">{{nameStatus == 'completed' ? 'Success' : nameStatus == 'error' ? 'Error' : 'Running'}}</span>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

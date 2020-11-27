@@ -1,0 +1,52 @@
+<app-comp-title [title]="'interval'" [subTitle]="'Emit numbers in sequence based on provided timeframe.'">
+
+</app-comp-title>
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Check your right column</mat-card-title>
+
+                <!-- <button #addBtn mat-raised-button color="primary">Capture Event</button> -->
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Emit sequence of videos at 1 second interval</mat-card-title>
+                <p>{{obsMsg}}</p>
+               <ul *ngFor="let video  of videosArray">
+                   <li>
+                       {{video}}
+                   </li>
+               </ul>
+               <p class="text-danger font-bold">{{obsMsg}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Check your right column for Timer</mat-card-title>
+
+                <!-- <button #addBtn mat-raised-button color="primary">Capture Event</button> -->
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Emit sequence of videos after 5 second in 1 sec interval</mat-card-title>
+                <ul *ngFor="let video  of videosArray2">
+                    <li>
+                        {{video}}
+                    </li>
+                </ul>
+                <p class="text-danger font-bold">{{obsMsg2}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
