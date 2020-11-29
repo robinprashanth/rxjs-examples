@@ -1,0 +1,68 @@
+<app-comp-title [title]="'filter'" [subTitle]="'Filter items emitted by the source Observable by only emitting those that satisfy a specified predicate.'">
+
+</app-comp-title>
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 01 <strong>Filter:</strong> by length</mat-card-title>
+                <hr>
+
+                <table>
+                    <tr> 
+                        <th>ID</th>
+                        <th>NAME</th>
+                    </tr>
+                    <tr *ngFor="let user of usersByLength">
+                        <td>{{user._id}}</td>
+                        <td>{{user.name}}</td>
+                    </tr>
+                </table>
+
+                <p class="text-danger font-bold"></p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 02 <strong>Filter:</strong> by Gender</mat-card-title>
+                <hr>
+
+                <table>
+                    <tr> 
+                        <th>ID</th>
+                        <th>NAME</th>
+                    </tr>
+                    <tr *ngFor="let user of usersByGender">
+                        <td>{{user._id}}</td>
+                        <td>{{user.name}}</td>
+                    </tr>
+                </table>
+
+                <p class="text-danger font-bold"></p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 03 <strong>Filter:</strong> by length</mat-card-title>
+                <hr>
+
+                <table>
+                    <tr> 
+                        <th>ID</th>
+                        <th>NAME</th>
+                    </tr>
+                    <tr *ngFor="let user of usersByNth">
+                        <td>{{user._id}}</td>
+                        <td>{{user.name}}</td>
+                    </tr>
+                </table>
+
+                <p class="text-danger font-bold"></p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

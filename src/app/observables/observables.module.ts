@@ -13,10 +13,14 @@ import { IntervalComponent } from './interval/interval.component';
 import { OfFromComponent } from './of-from/of-from.component';
 import { ToArrayComponent } from './to-array/to-array.component';
 import { CustomObsComponent } from './custom-obs/custom-obs.component';
+import { MapOperatorComponent } from './map-operator/map-operator.component';
+import { PluckOperatorComponent } from './pluck-operator/pluck-operator.component';
+import { FilterOperatorComponent } from './filter-operator/filter-operator.component';
+import { TapOperatorComponent } from './tap-operator/tap-operator.component';
 
 
 @NgModule({
-  declarations: [ObservableHomeComponent, FromEventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObsComponent],
+  declarations: [ObservableHomeComponent, FromEventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObsComponent, MapOperatorComponent, PluckOperatorComponent, FilterOperatorComponent, TapOperatorComponent],
   imports: [
     CommonModule,
     MaterialModule,

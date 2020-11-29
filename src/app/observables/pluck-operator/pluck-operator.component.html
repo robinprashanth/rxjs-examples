@@ -1,0 +1,33 @@
+<app-comp-title [title]="'pluck'" [subTitle]="'Maps each source value (an object) to its specified nested property.'">
+
+</app-comp-title>
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 01</mat-card-title>
+                <hr>
+                <ul *ngFor="let user of userStream">
+                    <li>
+                        {{user}}
+                    </li>
+                </ul>
+                <p class="text-danger font-bold"></p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 02 Nesting</mat-card-title>
+                <hr>
+                <ul *ngFor="let hobby of userNestedStream">
+                    <li>
+                        {{hobby}}
+                    </li>
+                </ul>
+                <p class="text-danger font-bold"></p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

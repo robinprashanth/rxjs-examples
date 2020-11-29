@@ -6,6 +6,10 @@ import { ObservableHomeComponent } from './observable-home/observable-home.compo
 import { OfFromComponent } from './of-from/of-from.component';
 import { ToArrayComponent } from './to-array/to-array.component';
 import { CustomObsComponent } from './custom-obs/custom-obs.component';
+import { MapOperatorComponent } from './map-operator/map-operator.component';
+import { PluckOperatorComponent } from './pluck-operator/pluck-operator.component';
+import { FilterOperatorComponent } from './filter-operator/filter-operator.component';
+import { TapOperatorComponent } from './tap-operator/tap-operator.component';
 
 export const ObservablesRoutes: Routes = [
     {
@@ -34,6 +38,22 @@ export const ObservablesRoutes: Routes = [
             {
                 path: 'cust-observable',
                 component: CustomObsComponent
+            },
+            {
+                path: 'map-operator',
+                component: MapOperatorComponent
+            },
+            {
+                path: 'pluck-operator',
+                component: PluckOperatorComponent
+            },
+            {
+                path: 'filter-operator',
+                component: FilterOperatorComponent
+            },
+            {
+                path: 'tap-operator',
+                component: TapOperatorComponent
             }
         ]
     }

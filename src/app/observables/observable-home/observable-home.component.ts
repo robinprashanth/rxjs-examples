@@ -27,6 +27,22 @@ export class ObservableHomeComponent implements OnInit {
     {
       name: "custom Observable",
       link: "cust-observable"
+    },
+    {
+      name: "map",
+      link: "map-operator"
+    },
+    {
+      name: "pluck",
+      link: "pluck-operator"
+    },
+    {
+      name: "filter",
+      link: "filter-operator"
+    },
+    {
+      name: "tap",
+      link: "tap-operator"
     }
   ]
 
