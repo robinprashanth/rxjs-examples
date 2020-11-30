@@ -8,7 +8,7 @@ import { UtilityService } from 'src/app/core/utility.service';
 })
 export class SubjectComponent implements OnInit, OnDestroy {
 
-  userName: string = "Arnold";
+  userName: string;
 
   constructor(private _utilityService: UtilityService) { 
     this._utilityService.userName.subscribe(res => {
