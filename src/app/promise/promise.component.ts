@@ -19,9 +19,47 @@ export class PromiseComponent implements OnInit {
   public users = [];
   public usersTransformed = "";
   public usersUpperCased = "";
+  tick = Date.now();
 
   ngOnInit(): void {
+
+    this.log('😍 synchronous 1');
+
+    this.log(this.codeBlocker());
+
+    setTimeout( _ => {
+      console.log('🥝 timeout 2');
+    }, 0);
+
+
     
+    Promise.resolve().then(_ => console.log('🍇 Prmoise'));
+
+    this.log('😍 synchronous 2');
+  }
+
+  log = (v) => console.log(`${v} \n Elapsed: ${Date.now() - this.tick}`);
+
+  // Not using promises correctly
+  // codeBlocker = () => {
+  //   return new Promise((resolve, reject) => {
+  //     let i = 0;
+  //     while(i < 1000000000) {
+  //       i++;
+  //     }
+  //     resolve('🦁 billion lopps done');
+  //   });
+   
+  // }
+  codeBlocker = () => {
+    return Promise.resolve().then(v => {
+      let i = 0;
+      while(i < 100000) {
+        i++;
+      }
+      return '🦁 billion lopps done';
+    })
+   
   }
 
   checkAvailability(): Promise<string> {

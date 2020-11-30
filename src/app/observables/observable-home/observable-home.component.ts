@@ -43,6 +43,18 @@ export class ObservableHomeComponent implements OnInit {
     {
       name: "tap",
       link: "tap-operator"
+    },
+    {
+      name: "take",
+      link: "take-operator"
+    },
+    {
+      name: "retry, retryWhen",
+      link: "retry-operator"
+    },
+    {
+      name: "debounce and distinctUntilChanged",
+      link: "debounce-operator"
     }
   ]
 

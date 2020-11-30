@@ -10,6 +10,9 @@ import { MapOperatorComponent } from './map-operator/map-operator.component';
 import { PluckOperatorComponent } from './pluck-operator/pluck-operator.component';
 import { FilterOperatorComponent } from './filter-operator/filter-operator.component';
 import { TapOperatorComponent } from './tap-operator/tap-operator.component';
+import { TakeOperatorComponent } from './take-operator/take-operator.component';
+import { RetryOperatorComponent } from './retry-operator/retry-operator.component';
+import { DebounceOperatorComponent } from './debounce-operator/debounce-operator.component';
 
 export const ObservablesRoutes: Routes = [
     {
@@ -54,6 +57,18 @@ export const ObservablesRoutes: Routes = [
             {
                 path: 'tap-operator',
                 component: TapOperatorComponent
+            },
+            {
+                path: 'take-operator',
+                component: TakeOperatorComponent
+            },
+            {
+                path: 'retry-operator',
+                component: RetryOperatorComponent
+            },
+            {
+                path: 'debounce-operator',
+                component: DebounceOperatorComponent
             }
         ]
     }

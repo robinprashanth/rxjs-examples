@@ -1,0 +1,41 @@
+<app-comp-title [title]="'debounce, distinctUntilChanged'" [subTitle]="">
+
+</app-comp-title>
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <p><strong>Ex - 01 </strong>debounce</p>
+                <hr>
+                <p>Emits a value from the source Observable only after a particular time span determined by another Observable has passed without another source emission.
+                </p>
+                <form class="example-form">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Favorite food</mat-label>
+                      <input matInput placeholder="Ex. Pizza" #debounceInput>
+                    </mat-form-field>
+                  </form>
+
+                <p>Typed Input: <span class="text-info">{{data}}</span></p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <p><strong>Ex - 02 </strong>distinctUntilChanged</p>
+                <hr>
+                <p>Returns an Observable that emits all items emitted by the source Observable that are distinct by comparison from the previous item.
+                </p>
+                <form class="example-form">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Favorite food</mat-label>
+                      <input matInput placeholder="Ex. Pizza"  #debounceInput2>
+                    </mat-form-field>
+                  </form>
+
+                  <p>Typed Input: <span class="text-info">{{data2}}</span></p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

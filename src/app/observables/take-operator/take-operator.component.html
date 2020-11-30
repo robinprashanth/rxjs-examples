@@ -1,0 +1,62 @@
+<app-comp-title [title]="'take, takeLast, TakeUntil'" [subTitle]="'Emits only the first count values emitted by the source Observable.'">
+
+</app-comp-title>
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <p><strong>Source Data: </strong>{{randNames}}</p>
+
+                <p class="text-danger font-bold"></p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 01 | take(3)</mat-card-title>
+                <hr>
+
+                <ul *ngFor="let names  of takeExpArray">
+                    <li>
+                        {{names}}
+                    </li>
+                </ul>
+
+                <p class="text-danger font-bold"></p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 02 | takeLast(3) </mat-card-title>
+                <hr>
+
+                <ul *ngFor="let names  of takeLastExpArray">
+                    <li>
+                        {{names}}
+                    </li>
+                </ul>
+
+                <p class="text-danger font-bold"></p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 03 | takeUntil(3) </mat-card-title>
+                <hr>
+
+                <ul *ngFor="let names  of takeUntilExpArray">
+                    <li>
+                        {{names}}
+                    </li>
+                </ul>
+
+                <p class="text-danger font-bold"></p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

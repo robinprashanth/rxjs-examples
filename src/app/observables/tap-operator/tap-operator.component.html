@@ -1,1 +1,21 @@
-<p>tap-operator works!</p>
+<app-comp-title [title]="'tap'" [subTitle]="'Perform a side effect for every emission on the source Observable, but return an Observable that is identical to the source.'">
+
+</app-comp-title>
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 01 </mat-card-title>
+                <hr>
+
+                <ul *ngFor="let names  of namesStream">
+                    <li>
+                        {{names}}
+                    </li>
+                </ul>
+
+                <p class="text-danger font-bold"></p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

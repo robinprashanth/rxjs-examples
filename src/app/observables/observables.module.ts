@@ -17,15 +17,21 @@ import { MapOperatorComponent } from './map-operator/map-operator.component';
 import { PluckOperatorComponent } from './pluck-operator/pluck-operator.component';
 import { FilterOperatorComponent } from './filter-operator/filter-operator.component';
 import { TapOperatorComponent } from './tap-operator/tap-operator.component';
+import { TakeOperatorComponent } from './take-operator/take-operator.component';
+import { RetryOperatorComponent } from './retry-operator/retry-operator.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DebounceOperatorComponent } from './debounce-operator/debounce-operator.component';
+import { SubjectComponent } from './subject/subject.component';
 
 
 @NgModule({
-  declarations: [ObservableHomeComponent, FromEventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObsComponent, MapOperatorComponent, PluckOperatorComponent, FilterOperatorComponent, TapOperatorComponent],
+  declarations: [ObservableHomeComponent, FromEventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObsComponent, MapOperatorComponent, PluckOperatorComponent, FilterOperatorComponent, TapOperatorComponent, TakeOperatorComponent, RetryOperatorComponent, DebounceOperatorComponent, SubjectComponent],
   imports: [
     CommonModule,
     MaterialModule,
     FlexLayoutModule,
     SharedModule,
+    HttpClientModule,
     RouterModule.forChild(ObservablesRoutes),
   ]
 })

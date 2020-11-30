@@ -1,0 +1,31 @@
+<app-comp-title [title]="'retyr, retryWhen'" [subTitle]="'Returns an Observable that mirrors the source Observable with the exception of an error. If the source Observable calls error, this method will resubscribe to the source Observable for a maximum of count resubscriptions (given as a number parameter) rather than propagating the error call.'">
+
+</app-comp-title>
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <table>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{person?.id}}</td>
+                    </tr>
+                    <tr>
+                        <th>name</th>
+                        <td>{{person?.name}}</td>
+                    </tr>
+                    <tr>
+                        <th>username</th>
+                        <td>{{person?.username}}</td>
+                    </tr>
+                    <tr>
+                        <th>email</th>
+                        <td>{{person?.email}}</td>
+                    </tr>
+                </table>
+                <button class="m-t-10" mat-raised-button color="primary" (click)="fetchRemoteDetails()">{{loading ? 'Fetching Details' : 'Fetch Details'}}</button>
+                <p class="text-danger font-bold">Status: {{status}} </p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
