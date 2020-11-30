@@ -1,6 +1,7 @@
 <mat-toolbar color="primary">
    <span>Observables and Promises</span>
-   <span class="example-spacer"></span>
+   <span *ngIf="starter" class="label-primary m-l-10 p-5">starter</span>
+   <span class="example-spacer "></span>
    <button mat-button [routerLink]="['/promise']" >Promise</button>
    <button mat-button [routerLink]="['/observables']">Observable</button>
  </mat-toolbar>

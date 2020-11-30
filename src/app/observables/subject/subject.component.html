@@ -1,0 +1,22 @@
+<app-comp-title [title]="'Subject and Behavior subject'" [subTitle]="'A Subject is a special type of Observable that allows values to be multicasted to many Observers. Subjects are like EventEmitters.'">
+
+</app-comp-title>
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+             <p>Username is <span class="text-primary">{{userName}}</span></p>
+               
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
+        <app-comp-test1></app-comp-test1>
+    </div>
+    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
+        <app-comp-test2></app-comp-test2>
+    </div>
+    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
+        <app-comp-test3></app-comp-test3>
+    </div>
+</div>

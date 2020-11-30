@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-content>
+        <mat-card-header>
+            <mat-card-title>Comp1 </mat-card-title>
+        </mat-card-header>
+        <hr>
+        <mat-card-content>
+            <p>Username is <span class="text-primary">{{userName}}</span></p>
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Name</mat-label>
+                  <input matInput #uname>
+                </mat-form-field>
+              </form>
+
+           <button class="m-t-10" mat-raised-button color="primary" (click)="updateName(uname)">Check Mobiles Availability</button>
+          </mat-card-content>
+    </mat-card-content>
+</mat-card>

@@ -55,6 +55,10 @@ export class ObservableHomeComponent implements OnInit {
     {
       name: "debounce and distinctUntilChanged",
       link: "debounce-operator"
+    },
+    {
+      name: "subject and Behavior subject",
+      link: "subject"
     }
   ]
 

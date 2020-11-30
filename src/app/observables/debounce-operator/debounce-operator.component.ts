@@ -9,10 +9,10 @@ import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 })
 export class DebounceOperatorComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('debounceInput') debounceInput: ElementRef;
-  @ViewChild('debounceInput2') debounceInput2: ElementRef;
-  data: string
-  data2: string
+  @ViewChild('debounceInput') public debounceInput: ElementRef;
+  @ViewChild('debounceInput2') public debounceInput2: ElementRef;
+  public data: string
+  public data2: string
 
   constructor() { }
 
@@ -20,10 +20,11 @@ export class DebounceOperatorComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    // Ex 01
     const search = fromEvent<any>(this.debounceInput.nativeElement, 'keyup');
 
     search.pipe(
-      map(event =>event.target.value),
+      map(event => event.target.value),
       debounceTime(1000)
     ).subscribe(res => {
       console.log(res);
@@ -34,7 +35,7 @@ export class DebounceOperatorComponent implements OnInit, AfterViewInit {
     const search2 = fromEvent<any>(this.debounceInput2.nativeElement, 'keyup');
 
     search2.pipe(
-      map(event =>event.target.value),
+      map(event => event.target.value),
       debounceTime(600),
       distinctUntilChanged()
     ).subscribe(res => {

@@ -13,6 +13,7 @@ import { TapOperatorComponent } from './tap-operator/tap-operator.component';
 import { TakeOperatorComponent } from './take-operator/take-operator.component';
 import { RetryOperatorComponent } from './retry-operator/retry-operator.component';
 import { DebounceOperatorComponent } from './debounce-operator/debounce-operator.component';
+import { SubjectComponent } from './subject/subject.component';
 
 export const ObservablesRoutes: Routes = [
     {
@@ -69,6 +70,10 @@ export const ObservablesRoutes: Routes = [
             {
                 path: 'debounce-operator',
                 component: DebounceOperatorComponent
+            },
+            {
+                path: 'subject',
+                component: SubjectComponent
             }
         ]
     }
