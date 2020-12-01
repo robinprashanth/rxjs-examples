@@ -59,6 +59,10 @@ export class ObservableHomeComponent implements OnInit {
     {
       name: "subject and Behavior subject",
       link: "subject"
+    },
+    {
+      name: "replay subject",
+      link: "replay-subject"
     }
   ]
 

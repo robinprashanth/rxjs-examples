@@ -22,10 +22,11 @@ import { RetryOperatorComponent } from './retry-operator/retry-operator.componen
 import { HttpClientModule } from '@angular/common/http';
 import { DebounceOperatorComponent } from './debounce-operator/debounce-operator.component';
 import { SubjectComponent } from './subject/subject.component';
+import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
 
 
 @NgModule({
-  declarations: [ObservableHomeComponent, FromEventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObsComponent, MapOperatorComponent, PluckOperatorComponent, FilterOperatorComponent, TapOperatorComponent, TakeOperatorComponent, RetryOperatorComponent, DebounceOperatorComponent, SubjectComponent],
+  declarations: [ObservableHomeComponent, FromEventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObsComponent, MapOperatorComponent, PluckOperatorComponent, FilterOperatorComponent, TapOperatorComponent, TakeOperatorComponent, RetryOperatorComponent, DebounceOperatorComponent, SubjectComponent, ReplaySubjectComponent],
   imports: [
     CommonModule,
     MaterialModule,

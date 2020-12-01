@@ -14,6 +14,7 @@ import { TakeOperatorComponent } from './take-operator/take-operator.component';
 import { RetryOperatorComponent } from './retry-operator/retry-operator.component';
 import { DebounceOperatorComponent } from './debounce-operator/debounce-operator.component';
 import { SubjectComponent } from './subject/subject.component';
+import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
 
 export const ObservablesRoutes: Routes = [
     {
@@ -74,6 +75,10 @@ export const ObservablesRoutes: Routes = [
             {
                 path: 'subject',
                 component: SubjectComponent
+            },
+            {
+                path: 'replay-subject',
+                component: ReplaySubjectComponent
             }
         ]
     }

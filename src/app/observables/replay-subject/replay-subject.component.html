@@ -1,0 +1,66 @@
+<app-comp-title [title]="'replay subject'" [subTitle]="'A variant of Subject that replays or emits old values to new subscribers. It buffers a set number of values and will emit those values immediately to any new subscribers in addition to emitting new values to existing subscribers.'">
+
+</app-comp-title>
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Add video </mat-card-title>
+            </mat-card-header>
+            <hr>
+            <mat-card-content>
+                <form class="example-form">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Name</mat-label>
+                      <input matInput #video>
+                    </mat-form-field>
+                  </form>
+               <button class="m-t-10" mat-raised-button color="primary" (click)="addVideo(video)">Add video</button>
+               
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>user 1 videos</mat-card-title>
+              <hr>
+                <mat-list role="list">
+                    <mat-list-item role="listitem" *ngFor="let item of user1List">
+                        {{item}}
+                    </mat-list-item>
+                    
+                  </mat-list>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>user 2 videos</mat-card-title>
+                <hr>
+                <mat-list role="list">
+                    <mat-list-item role="listitem" *ngFor="let item of user2List">
+                        {{item}}
+                    </mat-list-item>
+                  </mat-list>
+                  <button class="m-t-10" mat-raised-button [color]="subscribeUser2Status ? 'warn' : 'primary'" (click)="subscribeUser2()">{{subscribeUser2Status ? 'UnSubscribe Videos' : 'Subscribe Videos'}}</button>
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>user 3</mat-card-title>
+                <hr>
+                <mat-list role="list">
+                    <mat-list-item role="listitem" *ngFor="let item of user3List">
+                        {{item}}
+                    </mat-list-item>
+                  </mat-list>
+                  <button class="m-t-10" mat-raised-button [color]="subscribeUser3Status ? 'warn' : 'primary'" (click)="subscribeUser3()">{{subscribeUser3Status ? 'UnSubscribe Videos' : 'Subscribe Videos'}}</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
