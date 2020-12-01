@@ -1,0 +1,45 @@
+<app-comp-title [title]="'concat'" [subTitle]="'Creates an output Observable which sequentially emits all values from given Observable and then moves on to the next.'">
+
+</app-comp-title>
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 01 | channel2(2)</mat-card-title>
+                <hr>
+                <p>Videos list: 1,2</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 02  | channel3(3)</mat-card-title>
+                <hr>
+                <p>Videos list: 1,2,3</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 03 | channel4(4)</mat-card-title>
+                <hr>
+                <p>Videos list: 1,2,3,4</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content >
+                <mat-card-title class="text-center">Channel(Subscriber)</mat-card-title>
+                <hr>
+                <ul *ngFor="let video  of allVideos">
+                    <li>
+                        {{video}}
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

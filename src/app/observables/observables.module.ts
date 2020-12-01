@@ -23,10 +23,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { DebounceOperatorComponent } from './debounce-operator/debounce-operator.component';
 import { SubjectComponent } from './subject/subject.component';
 import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
+import { ConcatOpratorComponent } from './concat-oprator/concat-oprator.component';
+import { MergeOpratorComponent } from './merge-oprator/merge-oprator.component';
+import { MergemapOpratorComponent } from './mergemap-oprator/mergemap-oprator.component';
 
 
 @NgModule({
-  declarations: [ObservableHomeComponent, FromEventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObsComponent, MapOperatorComponent, PluckOperatorComponent, FilterOperatorComponent, TapOperatorComponent, TakeOperatorComponent, RetryOperatorComponent, DebounceOperatorComponent, SubjectComponent, ReplaySubjectComponent],
+  declarations: [ObservableHomeComponent, FromEventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObsComponent, MapOperatorComponent, PluckOperatorComponent, FilterOperatorComponent, TapOperatorComponent, TakeOperatorComponent, RetryOperatorComponent, DebounceOperatorComponent, SubjectComponent, ReplaySubjectComponent, ConcatOpratorComponent, MergeOpratorComponent, MergemapOpratorComponent],
   imports: [
     CommonModule,
     MaterialModule,

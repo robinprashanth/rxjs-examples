@@ -1,0 +1,48 @@
+<app-comp-title [title]="'mergeMap'" [subTitle]="'Projects each source value to an Observable which is merged in the output Observable.'">
+
+</app-comp-title>
+<div fxLayout="row wrap">
+
+    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 01 | Map</mat-card-title>
+                <hr>
+                <p><strong> Videos:</strong> ['Tech', 'Action', 'Comdey'] </p>
+                <ul *ngFor="let data  of mapdata">
+                    <li>
+                        {{data}}
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 02 | Map + MergeAll</mat-card-title>
+                <hr>
+                <p><strong> Videos:</strong> ['Tech', 'Action', 'Comdey'] </p>
+                <ul *ngFor="let data  of mapdata2">
+                    <li>
+                        {{data}}
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Ex - 03 | MergeMap</mat-card-title>
+                <hr>
+                <p><strong> Videos:</strong> ['Tech', 'Action', 'Comdey'] </p>
+                <ul *ngFor="let data  of mergeMapdata">
+                    <li>
+                        {{data}}
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

@@ -63,6 +63,18 @@ export class ObservableHomeComponent implements OnInit {
     {
       name: "replay subject",
       link: "replay-subject"
+    },
+    {
+      name: "concat",
+      link: "concat-operator"
+    },
+    {
+      name: "merge",
+      link: "merge-operator"
+    },
+    {
+      name: "mergeMap",
+      link: "mergemap-operator"
     }
   ]
 
