@@ -17,6 +17,8 @@ export class OfFromComponent implements OnInit, OnDestroy {
   namesubscription2: Subscription;
   namesubsFromObs: Subscription;
   promSubsFromObs: Subscription;
+  subscription2: Subscription;
+
   fromObsNamesArray: string[] = [];
   fromPromise: string;
   fromStringObs: string[] = [];
@@ -47,6 +49,12 @@ export class OfFromComponent implements OnInit, OnDestroy {
       this.namesArray2 = res;
       this.obsMsg2 = "The names that I have for you";
     });
+
+    const source = of({ name: 'Brian' }, [1, 2, 3], function hello() {
+      return 'Hello';
+    });
+    //output: {name: 'Brian}, [1,2,3], function hello() { return 'Hello' }
+    this.subscription2 = source.subscribe(val => console.log(val),);
 
     // From - Array
     const obs3 = from(['Liam',
@@ -82,6 +90,7 @@ export class OfFromComponent implements OnInit, OnDestroy {
     this.namesubscription2.unsubscribe();
     this.namesubsFromObs.unsubscribe();
     this.promSubsFromObs.unsubscribe();
+    this.subscription2.unsubscribe();
   }
 
 
