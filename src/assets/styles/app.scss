@@ -15,6 +15,7 @@ body {
   color: $bodytext;
   font-weight: 300;
   background: $inverse;
+  min-height: 100vh;
 }
 
 html {
