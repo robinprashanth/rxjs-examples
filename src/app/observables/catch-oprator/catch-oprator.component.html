@@ -1,0 +1,17 @@
+<app-comp-title [title]="'catch & throwError'">
+
+</app-comp-title>
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card class="text-center">
+            <mat-card-content>
+                <mat-card-title>catchError</mat-card-title>
+               <p>Catches errors on the observable to be handled by returning a new observable or throwing an error.
+            </p>
+            <button class="m-t-10" mat-raised-button color="primary" (click)="fetchRemoteDetails()">Get users</button>
+            <p *ngIf="person">{{person | json}}</p>
+            <p *ngIf="!loading && error">We got a problem and the error is: <span class="text-danger font-bold">{{error}}</span></p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

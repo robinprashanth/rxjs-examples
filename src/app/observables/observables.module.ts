@@ -26,10 +26,11 @@ import { ReplaySubjectComponent } from './replay-subject/replay-subject.componen
 import { ConcatOpratorComponent } from './concat-oprator/concat-oprator.component';
 import { MergeOpratorComponent } from './merge-oprator/merge-oprator.component';
 import { MergemapOpratorComponent } from './mergemap-oprator/mergemap-oprator.component';
+import { CatchOpratorComponent } from './catch-oprator/catch-oprator.component';
 
 
 @NgModule({
-  declarations: [ObservableHomeComponent, FromEventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObsComponent, MapOperatorComponent, PluckOperatorComponent, FilterOperatorComponent, TapOperatorComponent, TakeOperatorComponent, RetryOperatorComponent, DebounceOperatorComponent, SubjectComponent, ReplaySubjectComponent, ConcatOpratorComponent, MergeOpratorComponent, MergemapOpratorComponent],
+  declarations: [ObservableHomeComponent, FromEventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObsComponent, MapOperatorComponent, PluckOperatorComponent, FilterOperatorComponent, TapOperatorComponent, TakeOperatorComponent, RetryOperatorComponent, DebounceOperatorComponent, SubjectComponent, ReplaySubjectComponent, ConcatOpratorComponent, MergeOpratorComponent, MergemapOpratorComponent, CatchOpratorComponent],
   imports: [
     CommonModule,
     MaterialModule,

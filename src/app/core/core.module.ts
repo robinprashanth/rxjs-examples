@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UtilityService } from './utility.service';
+import { ErrorService } from './error.service';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { UtilityService } from './utility.service';
     
   ],
   providers: [
-    UtilityService
+    UtilityService,
+    ErrorService
   ],
   exports: [],
 })

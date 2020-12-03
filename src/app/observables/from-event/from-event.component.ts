@@ -17,7 +17,11 @@ export class FromEventComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    
+    // Normally we  register event listeners.
+    document.addEventListener('click', () => console.log('Clicked!'));
+
+    // Using RxJS we create an observable instead.
+
     fromEvent(this.addBtn.nativeElement, 'click').subscribe(({x, y}: MouseEvent) => {
       this.listEvents.push({x, y});
     });

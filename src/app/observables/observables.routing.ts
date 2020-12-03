@@ -18,6 +18,7 @@ import { ReplaySubjectComponent } from './replay-subject/replay-subject.componen
 import { ConcatOpratorComponent } from './concat-oprator/concat-oprator.component';
 import { MergeOpratorComponent } from './merge-oprator/merge-oprator.component';
 import { MergemapOpratorComponent } from './mergemap-oprator/mergemap-oprator.component';
+import { CatchOpratorComponent } from './catch-oprator/catch-oprator.component';
 
 export const ObservablesRoutes: Routes = [
     {
@@ -94,6 +95,10 @@ export const ObservablesRoutes: Routes = [
             {
                 path: 'mergemap-operator',
                 component: MergemapOpratorComponent
+            },
+            {
+                path: 'catch-operator',
+                component: CatchOpratorComponent
             }
         ]
     }

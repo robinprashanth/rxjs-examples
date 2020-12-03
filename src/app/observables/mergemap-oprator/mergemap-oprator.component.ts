@@ -19,7 +19,7 @@ export class MergemapOpratorComponent implements OnInit {
     const src = from(['Tech', 'Action', 'Comdey']);
     
     // Ex 01 | Map
-    // We have subscribed 2 times when we use map.
+    // We have subscribed 2 times when we use map if the return type is observable.
 
     src.pipe(
       map(res => this.getData(res))

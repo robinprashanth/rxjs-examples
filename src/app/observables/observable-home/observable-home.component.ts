@@ -75,6 +75,10 @@ export class ObservableHomeComponent implements OnInit {
     {
       name: "mergeMap",
       link: "mergemap-operator"
+    },
+    {
+      name: "catchError & throwError",
+      link: "catch-operator"
     }
   ]
 

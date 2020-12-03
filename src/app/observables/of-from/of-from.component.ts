@@ -21,33 +21,31 @@ export class OfFromComponent implements OnInit, OnDestroy {
   fromPromise: string;
   fromStringObs: string[] = [];
 
-
   constructor() { }
 
   ngOnInit(): void {
+    
     //OF
-
     const obs1 = of('Liam',
       'Noah',
       'Oliver',
       'William',
-      'Elijah')
-
+      'Elijah');
 
     this.namesSubscription = obs1.subscribe(res => {
       this.namesArray.push(`${res}`);
-        this.obsMsg = "The names that I have for you";
+      this.obsMsg = "The names that I have for you";
     });
+
     const obs2 = of({ a: 'Liam',
       b: 'Noah',
       c: 'Oliver',
       d: 'William',
       e: 'Elijah'})
 
-
     this.namesubscription2 = obs2.subscribe(res => {
       this.namesArray2 = res;
-        this.obsMsg2 = "The names that I have for you";
+      this.obsMsg2 = "The names that I have for you";
     });
 
     // From - Array
@@ -71,14 +69,12 @@ export class OfFromComponent implements OnInit, OnDestroy {
         
       //output: 'Hello World'
       this.promSubsFromObs = promiseSource.subscribe((val: string) => this.fromPromise = val);
+      
       //From - string
       const obs6 = from("Rxjs");
         
       //output: 'Hello World'
       this.promSubsFromObs = obs6.subscribe((val: string) => this.fromStringObs.push(val));
-
-
-    
   }
 
   ngOnDestroy() {
