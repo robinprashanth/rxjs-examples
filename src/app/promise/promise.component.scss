@@ -1,0 +1,21 @@
+#promiseDiff {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #promiseDiff td, #promiseDiff th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #promiseDiff tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #promiseDiff tr:hover {background-color: #ddd;}
+  
+  #promiseDiff th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1e88e5;
+    color: white;
+  }

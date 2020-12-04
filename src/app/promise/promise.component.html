@@ -70,4 +70,24 @@
             </mat-card-content>
         </mat-card>
     </div>
+    <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title class="text-center">Promise vs Observable</mat-card-title>
+               <table id="promiseDiff">
+                   <tr>
+                    <th *ngFor = "let column of headers">
+                        {{column}}
+                      </th>
+                   </tr>
+                   <tr *ngFor = "let diff of promDiff">
+                    <td *ngFor = "let column of headers">
+                      {{diff[column]}}
+                    </td>
+                  </tr>
+                   
+               </table>
+            </mat-card-content>
+        </mat-card>
+    </div>
 </div>

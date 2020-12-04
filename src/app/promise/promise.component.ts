@@ -20,6 +20,24 @@ export class PromiseComponent implements OnInit {
   public usersTransformed = "";
   public usersUpperCased = "";
   tick = Date.now();
+  headers = ["promise", "Observables"];
+  promDiff = [{
+    promise: "Emit a single value at a time.",
+    Observables: "Emit multiple values over a period of time."
+  },
+  {
+    promise: "Are not lazy: execute immediately after creation.",
+    Observables: "Are lazy: they’re not executed until we subscribe to them using the subscribe() method."
+  },
+  {
+    promise: "Are not cancellable.",
+    Observables: "Have subscriptions that are cancellable using the unsubscribe() method, which stops the listener from receiving further values.	"
+  },
+  {
+    promise: "Don’t provide any operations.",
+    Observables: "Provide the map for forEach, filter, reduce, retry, and retryWhen operators.	"
+  }
+];
 
   ngOnInit(): void {
 
