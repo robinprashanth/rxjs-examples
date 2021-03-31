@@ -10,12 +10,14 @@ import { MaterialModule } from './material/material.module';
 import { PromiseComponent } from './promise/promise.component';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
+import { TestComponentComponent } from './test-component/test-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    PromiseComponent
+    PromiseComponent,
+    TestComponentComponent
   ],
   imports: [
     BrowserModule,
